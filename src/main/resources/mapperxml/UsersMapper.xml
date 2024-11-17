@@ -5,13 +5,11 @@
     <!--@mbg.generated-->
     <!--@Table USERS-->
     <id column="USER_ID" jdbcType="DECIMAL" property="userId" />
-    <result column="USERNAME" jdbcType="VARCHAR" property="username" />
-    <result column="USER_TYPE" jdbcType="VARCHAR" property="userType" />
-    <result column="USER_PERMISSIONS" jdbcType="VARCHAR" property="userPermissions" />
-    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="ROLE" jdbcType="VARCHAR" property="role" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    USER_ID, USERNAME, USER_TYPE, USER_PERMISSIONS, "PASSWORD"
+    USER_ID, "NAME", "ROLE"
   </sql>
 </mapper>

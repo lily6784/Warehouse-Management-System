@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.warehouse.demo.mapper.InventoryhistoryMapper">
+  <resultMap id="BaseResultMap" type="com.warehouse.demo.po.InventoryhistoryPo">
+    <!--@mbg.generated-->
+    <!--@Table INVENTORYHISTORY-->
+    <id column="HISTORY_ID" jdbcType="VARCHAR" property="historyId" />
+    <result column="INVENTORY_ID" jdbcType="VARCHAR" property="inventoryId" />
+    <result column="CHANGE_QUANTITY" jdbcType="DECIMAL" property="changeQuantity" />
+    <result column="UPDATED_BY" jdbcType="DECIMAL" property="updatedBy" />
+    <result column="UPDATE_DATE" jdbcType="TIMESTAMP" property="updateDate" />
+    <result column="REASON" jdbcType="VARCHAR" property="reason" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    HISTORY_ID, INVENTORY_ID, CHANGE_QUANTITY, UPDATED_BY, UPDATE_DATE, REASON
+  </sql>
+</mapper>

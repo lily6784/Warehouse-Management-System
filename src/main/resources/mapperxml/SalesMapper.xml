@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.warehouse.demo.mapper.SalesMapper">
+  <resultMap id="BaseResultMap" type="com.warehouse.demo.po.SalesPo">
+    <!--@mbg.generated-->
+    <!--@Table SALES-->
+    <id column="ORDER_ID" jdbcType="VARCHAR" property="orderId" />
+    <result column="PRODUCT_ID" jdbcType="VARCHAR" property="productId" />
+    <result column="CUSTOMER" jdbcType="VARCHAR" property="customer" />
+    <result column="QUANTITY_SOLD" jdbcType="DECIMAL" property="quantitySold" />
+    <result column="TOTAL_SALES" jdbcType="DECIMAL" property="totalSales" />
+    <result column="SALE_DATE" jdbcType="TIMESTAMP" property="saleDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ORDER_ID, PRODUCT_ID, CUSTOMER, QUANTITY_SOLD, TOTAL_SALES, SALE_DATE
+  </sql>
+</mapper>

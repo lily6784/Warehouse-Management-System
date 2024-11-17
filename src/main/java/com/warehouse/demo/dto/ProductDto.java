@@ -13,32 +13,39 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-@ApiModel(description="USERS")
+@ApiModel(description="PRODUCT")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "USERS")
-public class UsersDto implements Serializable {
+@TableName(value = "PRODUCT")
+public class ProductDto implements Serializable {
     /**
-     * 用户ID主键
+     * 商品ID主键
      */
-    @TableId(value = "USER_ID", type = IdType.INPUT)
-    @ApiModelProperty(value="用户ID主键")
-    private BigDecimal userId;
+    @TableId(value = "PRODUCT_ID", type = IdType.INPUT)
+    @ApiModelProperty(value="商品ID主键")
+    private String productId;
 
     /**
-     * 用户的名字
+     * 商品名称
      */
     @TableField(value = "\"NAME\"")
-    @ApiModelProperty(value="用户的名字")
+    @ApiModelProperty(value="商品名称")
     private String name;
 
     /**
-     * 用户角色 (admin, warehouse manager, sales staff)
+     * 商品类型
      */
-    @TableField(value = "\"ROLE\"")
-    @ApiModelProperty(value="用户角色 (admin, warehouse manager, sales staff)")
-    private String role;
+    @TableField(value = "\"TYPE\"")
+    @ApiModelProperty(value="商品类型")
+    private String type;
+
+    /**
+     * 商品价格
+     */
+    @TableField(value = "PRICE")
+    @ApiModelProperty(value="商品价格")
+    private BigDecimal price;
 
     private static final long serialVersionUID = 1L;
 }
